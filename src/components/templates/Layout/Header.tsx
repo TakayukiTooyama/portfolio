@@ -16,15 +16,7 @@ export const Header: VFC = () => {
 
   return (
     <>
-      <Box
-        bg="white"
-        w="100%"
-        pos="fixed"
-        top="0px"
-        color="black"
-        zIndex="1"
-        shadow="base"
-      >
+      <Box w="100%" pos="fixed" top="0px" zIndex="1" boxShadow="base">
         <Flex justify="space-between" align="center" py={2} px={4}>
           <Heading as="h1" size="lg">
             Takayuki Tooyama
