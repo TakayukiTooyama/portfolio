@@ -1,2 +1,2 @@
-export * from 'components/organisms/Nav';
-export * from 'components/organisms/Drawer/NavDrawer';
+export { default as NavDrawer } from 'components/organisms/Drawer/NavDrawer';
+export { default as Nav } from 'components/organisms/Nav';

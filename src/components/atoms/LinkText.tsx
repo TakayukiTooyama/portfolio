@@ -8,12 +8,7 @@ type Props = {
   fontSize?: string;
 };
 
-export const LinkText: VFC<Props> = ({
-  name,
-  href,
-  motion,
-  fontSize = '20px',
-}) => {
+const LinkText: VFC<Props> = ({ name, href, motion, fontSize = '20px' }) => {
   const scale = motion ? '1.2' : '1.0';
   return (
     <Link
@@ -27,3 +22,5 @@ export const LinkText: VFC<Props> = ({
     </Link>
   );
 };
+
+export default LinkText;

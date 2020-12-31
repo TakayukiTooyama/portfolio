@@ -1,2 +1,2 @@
-export * from 'components/atoms/LinkIcon';
-export * from 'components/atoms/LinkText';
+export { default as LinkIcon } from 'components/atoms/LinkIcon';
+export { default as LinkText } from 'components/atoms/LinkText';

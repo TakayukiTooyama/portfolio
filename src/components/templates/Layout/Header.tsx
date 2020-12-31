@@ -1,4 +1,4 @@
-import React, { VFC } from 'react';
+import { HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box,
   Flex,
@@ -6,12 +6,11 @@ import {
   IconButton,
   useDisclosure,
 } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
-
-import { Nav, NavDrawer } from 'components/organisms';
 import { DarkModeSwitch } from 'components/molecules';
+import { Nav, NavDrawer } from 'components/organisms';
+import React, { VFC } from 'react';
 
-export const Header: VFC = () => {
+const Header: VFC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -48,3 +47,5 @@ export const Header: VFC = () => {
     </>
   );
 };
+
+export default Header;

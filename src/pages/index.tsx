@@ -1,7 +1,6 @@
+import { Layout } from 'components/templates';
 import { NextPage } from 'next';
 
-import { Layout } from 'components/templates/Layout';
-
-const Home: NextPage = () => <Layout></Layout>;
+const Home: NextPage = () => <Layout>hello</Layout>;
 
 export default Home;

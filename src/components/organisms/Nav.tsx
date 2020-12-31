@@ -1,9 +1,8 @@
-import React, { VFC } from 'react';
 import { Stack } from '@chakra-ui/react';
-
 import { LinkText } from 'components/atoms';
+import React, { VFC } from 'react';
 
-export const Nav: VFC = () => {
+const Nav: VFC = () => {
   const contents = [
     {
       name: 'Profile',
@@ -25,13 +24,10 @@ export const Nav: VFC = () => {
   return (
     <Stack spacing={8} align="center" direction={['column', 'column', 'row']}>
       {contents.map((item) => (
-        <LinkText
-          key={item.name}
-          name={item.name}
-          href={item.link}
-          motion={true}
-        />
+        <LinkText key={item.name} name={item.name} href={item.link} motion />
       ))}
     </Stack>
   );
 };
+
+export default Nav;

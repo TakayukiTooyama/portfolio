@@ -1,23 +1,23 @@
-import { Drawer, DrawerOverlay, DrawerContent } from '@chakra-ui/react';
+import { Drawer, DrawerContent, DrawerOverlay } from '@chakra-ui/react';
 import { VFC } from 'react';
 
-import DrawerHeader from './DrawerHeader';
 import DrawerBody from './DrawerBody';
+import DrawerHeader from './DrawerHeader';
 
 type Props = {
   onClose: () => void;
   isOpen: boolean;
 };
 
-export const NavDrawer: VFC<Props> = ({ onClose, isOpen }) => {
-  return (
-    <Drawer onClose={onClose} isOpen={isOpen}>
-      <DrawerOverlay>
-        <DrawerContent>
-          <DrawerHeader onClose={onClose} />
-          <DrawerBody />
-        </DrawerContent>
-      </DrawerOverlay>
-    </Drawer>
-  );
-};
+const NavDrawer: VFC<Props> = ({ onClose, isOpen }) => (
+  <Drawer onClose={onClose} isOpen={isOpen}>
+    <DrawerOverlay>
+      <DrawerContent>
+        <DrawerHeader onClose={onClose} />
+        <DrawerBody />
+      </DrawerContent>
+    </DrawerOverlay>
+  </Drawer>
+);
+
+export default NavDrawer;

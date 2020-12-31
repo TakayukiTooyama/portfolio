@@ -1,20 +1,18 @@
-import Head from 'next/head';
-import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
-
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import theme from 'utils/theme';
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  return (
-    <>
-      <Head>
-        <title>TakayukiTooyama Portfolio</title>
-      </Head>
-      <ChakraProvider resetCSS theme={theme}>
-        <Component {...pageProps} />
-      </ChakraProvider>
-    </>
-  );
-};
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+const MyApp = ({ Component, pageProps }: AppProps) => (
+  <Head>
+    <Head>
+      <title>TakayukiTooyama Portfolio</title>
+    </Head>
+    <ChakraProvider resetCSS theme={theme}>
+      <Component {...pageProps} />
+    </ChakraProvider>
+  </Head>
+);
 
 export default MyApp;

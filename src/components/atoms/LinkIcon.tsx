@@ -9,7 +9,7 @@ type Props = {
   motion?: boolean;
 };
 
-export const LinkIcon: VFC<Props> = ({ href, icon, color, motion }) => {
+const LinkIcon: VFC<Props> = ({ href, icon, color, motion }) => {
   const scale = motion ? '1.2' : '1.0';
   return (
     <Link href={href} isExternal>
@@ -18,7 +18,7 @@ export const LinkIcon: VFC<Props> = ({ href, icon, color, motion }) => {
         w={8}
         h={8}
         _hover={{
-          color: color,
+          color,
           transform: `scale(${scale})`,
           transition: 'all 0.4s ease-out',
         }}
@@ -26,3 +26,5 @@ export const LinkIcon: VFC<Props> = ({ href, icon, color, motion }) => {
     </Link>
   );
 };
+
+export default LinkIcon;

@@ -1,8 +1,9 @@
-import { useColorMode, Switch, HStack, Icon } from '@chakra-ui/react';
+import { HStack, Icon, Switch, useColorMode } from '@chakra-ui/react';
+import { VFC } from 'react';
 import { FaMoon } from 'react-icons/fa';
 import { IoMdSunny } from 'react-icons/io';
 
-export const DarkModeSwitch = () => {
+const DarkModeSwitch: VFC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === 'dark';
   return (
@@ -17,3 +18,5 @@ export const DarkModeSwitch = () => {
     </HStack>
   );
 };
+
+export default DarkModeSwitch;

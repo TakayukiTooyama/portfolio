@@ -1,15 +1,14 @@
-import React, { VFC } from 'react';
 import { DrawerBody as Body, Flex, Stack } from '@chakra-ui/react';
+import { LinkIcon } from 'components/atoms';
+import { DarkModeSwitch } from 'components/molecules';
+import { Nav } from 'components/organisms';
+import React, { VFC } from 'react';
 import {
-  FaTwitterSquare,
+  FaGithubSquare,
   FaInstagram,
   FaLinkedin,
-  FaGithubSquare,
+  FaTwitterSquare,
 } from 'react-icons/fa';
-
-import { LinkIcon } from 'components/atoms';
-import { Nav } from 'components/organisms';
-import { DarkModeSwitch } from 'components/molecules';
 
 const DrawerBody: VFC = () => {
   const snsLinks = [
@@ -43,7 +42,7 @@ const DrawerBody: VFC = () => {
               key={item.label}
               href={item.href}
               icon={item.icon}
-              motion={true}
+              motion
               color={item.color}
             />
           ))}
