@@ -5,14 +5,14 @@ import theme from 'utils/theme';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Head>
+  <>
     <Head>
       <title>TakayukiTooyama Portfolio</title>
     </Head>
     <ChakraProvider resetCSS theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
-  </Head>
+  </>
 );
 
 export default MyApp;
