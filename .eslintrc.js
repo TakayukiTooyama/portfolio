@@ -75,6 +75,7 @@ module.exports = {
     'simple-import-sort/exports': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'no-underscore-dangle': 'off',
   },
   overrides: [
     {
