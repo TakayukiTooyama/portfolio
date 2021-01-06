@@ -6,25 +6,25 @@ const Nav: VFC = () => {
   const contents = [
     {
       name: 'Profile',
-      link: '/profile',
+      link: 'profile',
     },
     {
       name: 'Skill',
-      link: '/skill',
+      link: 'skill',
     },
     {
       name: 'Works',
-      link: '/works',
+      link: 'works',
     },
     {
       name: 'Contact',
-      link: '/contact',
+      link: 'contact',
     },
   ];
   return (
     <Stack spacing={8} align="center" direction={['column', 'column', 'row']}>
       {contents.map((item) => (
-        <LinkText key={item.name} name={item.name} href={item.link} motion />
+        <LinkText key={item.name} name={item.name} link={item.link} />
       ))}
     </Stack>
   );

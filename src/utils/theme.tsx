@@ -1,6 +1,10 @@
 import { theme as chakraTheme } from '@chakra-ui/react';
 
-const fonts = { ...chakraTheme.fonts, mono: `'Menlo', monospace` };
+const fonts = {
+  ...chakraTheme.fonts,
+  heading: `'游明朝体', sans-serif`,
+  body: `'游明朝体', sans-serif`,
+};
 // const breakpoints = ['40em', '52em', '64em'];
 const theme = {
   ...chakraTheme,

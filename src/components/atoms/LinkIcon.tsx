@@ -9,7 +9,7 @@ type Props = {
   motion?: boolean;
 };
 
-const LinkIcon: VFC<Props> = ({ href, icon, color, motion }) => {
+const LinkIcon: VFC<Props> = ({ href, icon, color, motion = true }) => {
   const scale = motion ? '1.2' : '1.0';
   return (
     <Link href={href} isExternal>

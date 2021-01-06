@@ -1,2 +1,11 @@
+export { default as BoxShadow } from 'components/atoms/BoxShadow';
+export { default as ButtonToTop } from 'components/atoms/ButtonToTop';
+export { default as DarkModeBox } from 'components/atoms/DarkModeBox';
+export { default as GithubIcon } from 'components/atoms/icons/GithubIcon';
+export { default as InstagramIcon } from 'components/atoms/icons/InstagramIcon';
+export { default as LinkedInIcon } from 'components/atoms/icons/LinkedInIcon';
+export { default as TwitterIcon } from 'components/atoms/icons/TwitterIcon';
+export { default as LinkButton } from 'components/atoms/LinkButton';
 export { default as LinkIcon } from 'components/atoms/LinkIcon';
 export { default as LinkText } from 'components/atoms/LinkText';
+export { default as SectionTitle } from 'components/atoms/SectionTitle';

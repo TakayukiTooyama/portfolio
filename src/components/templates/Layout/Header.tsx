@@ -6,18 +6,37 @@ import {
   IconButton,
   useDisclosure,
 } from '@chakra-ui/react';
+import { DarkModeBox } from 'components/atoms';
 import { DarkModeSwitch } from 'components/molecules';
 import { Nav, NavDrawer } from 'components/organisms';
+import useScroll from 'hooks/useScroll';
+import { useRouter } from 'next/router';
 import React, { VFC } from 'react';
 
 const Header: VFC = () => {
+  const router = useRouter();
+  const { height } = useScroll();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Box w="100%" pos="fixed" top="0px" zIndex="1" boxShadow="base">
-        <Flex justify="space-between" align="center" py={2} px={4}>
-          <Heading as="h1" size="lg">
+      <DarkModeBox
+        bglight="white"
+        w="100%"
+        pos="fixed"
+        top="0px"
+        zIndex="1"
+        boxShadow="base"
+        transform={`translateY(${height})`}
+        transition="transform 0.1s linear"
+      >
+        <Flex justify="space-between" align="center" py={[2, 2, 4]} px={4}>
+          <Heading
+            as="h1"
+            size="lg"
+            cursor="pointer"
+            onClick={() => router.push('/')}
+          >
             Takayuki Tooyama
           </Heading>
 
@@ -41,9 +60,10 @@ const Header: VFC = () => {
             <HamburgerIcon w={6} h={6} />
           </IconButton>
         </Flex>
-      </Box>
+      </DarkModeBox>
+
       <NavDrawer isOpen={isOpen} onClose={onClose} />
-      <Box mb={14} />
+      <DarkModeBox pb={14} />
     </>
   );
 };

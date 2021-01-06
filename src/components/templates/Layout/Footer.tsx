@@ -1,12 +1,19 @@
-import { Box, Divider, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
+import { ButtonToTop, DarkModeBox } from 'components/atoms';
 import { VFC } from 'react';
 
 const Footer: VFC = () => (
   <>
-    <Divider />
-    <Box as="footer" py={4}>
-      <Text>@takayuki tooyama</Text>
-    </Box>
+    <DarkModeBox
+      bglight="white"
+      as="footer"
+      pos="relative"
+      textAlign="center"
+      py={4}
+    >
+      <Text mr="400px">@takayuki tooyama</Text>
+      <ButtonToTop />
+    </DarkModeBox>
   </>
 );
 
