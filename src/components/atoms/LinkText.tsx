@@ -6,17 +6,14 @@ import { Link } from 'react-scroll';
 type Props = {
   name: string;
   link: string;
-  fontSize?: string;
 };
 
 const LinkStyle = styled(Link)`
-  &:hover {
-    transform: 'scale(1.2)';
-    transition: 'all 0.4s ease-out';
-  }
+  position: relative;
+  cursor: pointer;
 `;
 
-const LinkText: VFC<Props> = ({ name, link, fontSize = '20px' }) => (
+const LinkText: VFC<Props> = ({ name, link }) => (
   <LinkStyle
     activeClass="active"
     to={link}
@@ -25,7 +22,7 @@ const LinkText: VFC<Props> = ({ name, link, fontSize = '20px' }) => (
     offset={-70}
     duration={800}
   >
-    <Text fontSize={fontSize}>{name}</Text>
+    <Text fontSize="25px">{name}</Text>
   </LinkStyle>
 );
 

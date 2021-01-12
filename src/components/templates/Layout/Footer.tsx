@@ -1,18 +1,11 @@
 import { Text } from '@chakra-ui/react';
-import { ButtonToTop, DarkModeBox } from 'components/atoms';
+import { DarkModeBox } from 'components/atoms';
 import { VFC } from 'react';
 
 const Footer: VFC = () => (
   <>
-    <DarkModeBox
-      bglight="white"
-      as="footer"
-      pos="relative"
-      textAlign="center"
-      py={4}
-    >
-      <Text mr="400px">@takayuki tooyama</Text>
-      <ButtonToTop />
+    <DarkModeBox as="footer" textAlign="center" h="60px" lineHeight="60px">
+      <Text>@2021 Takayuki Tooyama</Text>
     </DarkModeBox>
   </>
 );

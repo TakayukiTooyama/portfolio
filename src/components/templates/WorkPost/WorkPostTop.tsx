@@ -1,33 +1,27 @@
-import { Box, Heading, Image, Text } from '@chakra-ui/react';
-import { BoxShadow } from 'components/atoms';
+import { Heading, Text } from '@chakra-ui/react';
+import { Border, DarkModeBox } from 'components/atoms';
+import { Container } from 'components/templates';
+import dayjs from 'dayjs';
 import React, { VFC } from 'react';
 
 type Props = {
   title: string;
-  languages: string;
-  mockup: string;
+  date: Date;
 };
 
-const WorkPostTop: VFC<Props> = ({ title, languages, mockup }) => (
-  <Box align="center" pos="relative" mb="15rem">
-    <BoxShadow px={4} py={4}>
-      <Heading as="h1" size="xl">
-        {title}
-      </Heading>
-      <Text>{languages}</Text>
-      <Box pb={20} />
-      <Image
-        src={mockup}
-        alt={title}
-        w="60%"
-        h="auto"
-        pos="absolute"
-        top="60%"
-        left="50%"
-        transform="translateX(-50%)"
-      />
-    </BoxShadow>
-  </Box>
-);
+const WorkPostTop: VFC<Props> = ({ title, date }) => {
+  const dateFormat = dayjs(date).format('YYYY/MM/DD');
+  return (
+    <DarkModeBox>
+      <Container align="center">
+        <Heading as="h1" size="xl">
+          {title}
+        </Heading>
+        <Text>{dateFormat}</Text>
+      </Container>
+      <Border />
+    </DarkModeBox>
+  );
+};
 
 export default WorkPostTop;

@@ -21,7 +21,7 @@ const useScroll = (): { height: string } => {
     };
   }, [handleScroll]);
 
-  const height = slide ? '-100%' : '0px';
+  const height = slide ? '-60px' : '0px';
 
   return { height };
 };

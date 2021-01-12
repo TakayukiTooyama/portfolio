@@ -8,10 +8,10 @@ type Props = {
 
 const SkillCard: VFC<Props> = ({ title, text }) => (
   <Box shadow="lg" align="center">
-    <Box py={4} px={2} bg="purple.700" color="white">
+    <Box py={4} px={2} bg="brand.700" color="white">
       <Text>{title}</Text>
     </Box>
-    <Box py={4} px={2} bg="white" color="black">
+    <Box py={4} px={2} bg="gray.100" color="black">
       <Text>{text}</Text>
     </Box>
   </Box>

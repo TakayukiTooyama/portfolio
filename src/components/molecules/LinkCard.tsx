@@ -1,5 +1,5 @@
 import { Stack, Text } from '@chakra-ui/react';
-import { BoxShadow, DarkModeBox, LinkButton } from 'components/atoms';
+import { BoxShadow, LinkButton } from 'components/atoms';
 import React, { VFC } from 'react';
 
 type Props = {
@@ -8,24 +8,16 @@ type Props = {
 };
 
 const LinkCard: VFC<Props> = ({ name, href }) => (
-  <BoxShadow>
-    <DarkModeBox
-      px={4}
-      py={4}
-      boxShadow="base"
-      bglight="white"
-      textAlign="center"
+  <BoxShadow px={8} py={8} textAlign="center" borderRadius="10px" box="inner">
+    <Stack
+      direction={['column', 'row']}
+      align="center"
+      justify={['center', 'space-between']}
+      spacing={2}
     >
-      <Stack
-        direction={['column', 'row']}
-        align="center"
-        justify={['center', 'space-between']}
-        spacing={2}
-      >
-        <Text fontSize="xl">{name}</Text>
-        <LinkButton href={href} />
-      </Stack>
-    </DarkModeBox>
+      <Text fontSize="xl">{name}</Text>
+      <LinkButton href={href} />
+    </Stack>
   </BoxShadow>
 );
 

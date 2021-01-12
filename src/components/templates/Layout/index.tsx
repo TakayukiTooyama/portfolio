@@ -1,5 +1,4 @@
-import { Container } from '@chakra-ui/react';
-import { DarkModeBox } from 'components/atoms';
+import { Box } from '@chakra-ui/react';
 import { Footer, Header } from 'components/templates';
 import type { FC, ReactNode } from 'react';
 
@@ -8,13 +7,11 @@ type Props = {
 };
 
 const Layout: FC<Props> = ({ children }) => (
-  <DarkModeBox bgdark="#000">
+  <>
     <Header />
-    <Container maxW="2xl" py={8}>
-      {children}
-    </Container>
+    <Box>{children}</Box>
     <Footer />
-  </DarkModeBox>
+  </>
 );
 
 export default Layout;

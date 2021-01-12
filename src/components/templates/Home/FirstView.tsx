@@ -1,23 +1,22 @@
-import { ChevronDownIcon } from '@chakra-ui/icons';
-import { Box, Heading, HStack, IconButton, Text } from '@chakra-ui/react';
+import { ArrowDownIcon } from '@chakra-ui/icons';
+import { Box, Heading, HStack, Text } from '@chakra-ui/react';
 import {
+  DarkModeBox,
+  Forest,
   GithubIcon,
   InstagramIcon,
   LinkedInIcon,
+  Sun,
   TwitterIcon,
+  Wave,
 } from 'components/atoms';
 import React, { VFC } from 'react';
 
-const FirstView: VFC = () => {
-  const downScroll = () => {
-    const height = window.innerHeight;
-    window.scrollTo({
-      top: height,
-      behavior: 'smooth',
-    });
-  };
-  return (
-    <Box align="center" h="89vh" pos="relative">
+const FirstView: VFC = () => (
+  <>
+    <Box align="center" pos="relative">
+      <Sun />
+      <Forest />
       <Box
         w="100%"
         pos="absolute"
@@ -39,16 +38,20 @@ const FirstView: VFC = () => {
         </HStack>
         <Box mb={8} />
 
-        <IconButton
-          aria-label="down-icon"
-          isRound
-          shadow="base"
-          icon={<ChevronDownIcon w={8} h={8} />}
-          onClick={downScroll}
-        />
+        <ArrowDownIcon w={8} h={8} />
       </Box>
     </Box>
-  );
-};
+    <DarkModeBox
+      h="400px"
+      bglight="white"
+      bgdark="#000"
+      textAlign="center"
+      lineHeight="350px"
+    >
+      <Text fontSize={['2xl', '3xl', '4xl']}>Welcome to My Portfolio</Text>
+    </DarkModeBox>
+    <Wave filllight="#fff" filldark="#000" />
+  </>
+);
 
 export default FirstView;

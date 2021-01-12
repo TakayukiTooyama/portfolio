@@ -1,6 +1,7 @@
 import { Box, Stack } from '@chakra-ui/react';
-import { SectionTitle } from 'components/atoms';
+import { Border, DarkModeBox, SectionTitle } from 'components/atoms';
 import { SkillCard } from 'components/molecules';
+import { Container } from 'components/templates';
 import React, { VFC } from 'react';
 import { Element } from 'react-scroll';
 
@@ -15,17 +16,20 @@ const Skill: VFC = () => {
     { title: 'Other Tool', text: 'git, yarn, AdobeXD, Figma' },
   ];
   return (
-    <Element name="skill">
-      <Box align="center" h="100vh">
-        <SectionTitle title="Skill" />
-        <Box mb={4} />
-        <Stack spacing={8} maxW="500px" mx="auto">
-          {cardContents.map((item) => (
-            <SkillCard key={item.title} title={item.title} text={item.text} />
-          ))}
-        </Stack>
-      </Box>
-    </Element>
+    <DarkModeBox bglight="brand.600" bgdark="gray.800">
+      <Container>
+        <Element name="skill">
+          <SectionTitle title="Skill" color="white" />
+          <Box mb={4} />
+          <Stack spacing={8} maxW="500px" mx="auto">
+            {cardContents.map((item) => (
+              <SkillCard key={item.title} title={item.title} text={item.text} />
+            ))}
+          </Stack>
+        </Element>
+      </Container>
+      <Border />
+    </DarkModeBox>
   );
 };
 

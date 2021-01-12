@@ -1,5 +1,6 @@
+import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import { Flex } from '@chakra-ui/react';
-import { BoxShadow, DarkModeBox } from 'components/atoms';
+import { BoxShadow } from 'components/atoms';
 import Link from 'next/link';
 import React, { VFC } from 'react';
 
@@ -9,14 +10,18 @@ type Props = {
 };
 
 const PostLink: VFC<Props> = ({ nextSlug, prevSlug }) => (
-  <BoxShadow>
-    <DarkModeBox px={6} py={3} shadow="md" w="100%" bglight="white">
-      <Flex justify="space-between" align="center">
-        <Link href={prevSlug}>前へ</Link>
-        <Link href="/">ホームへ</Link>
-        <Link href={nextSlug}>次へ</Link>
+  <BoxShadow px={8} py={4} borderRadius="10px">
+    <Flex justify="space-between" align="center">
+      <Flex align="center">
+        <ArrowBackIcon />
+        <Link href={prevSlug}>Prev</Link>
       </Flex>
-    </DarkModeBox>
+      <Link href="/">Home</Link>
+      <Flex align="center">
+        <Link href={nextSlug}>Next</Link>
+        <ArrowForwardIcon />
+      </Flex>
+    </Flex>
   </BoxShadow>
 );
 

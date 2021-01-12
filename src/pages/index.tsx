@@ -1,5 +1,12 @@
-import { Stack } from '@chakra-ui/react';
-import { FirstView, Layout, Profile, Skill, Works } from 'components/templates';
+import {
+  Contact,
+  EndMessage,
+  FirstView,
+  Layout,
+  Profile,
+  Skill,
+  Works,
+} from 'components/templates';
 import { getAllPost } from 'lib/postApi';
 import { GetStaticProps, NextPage } from 'next';
 import type { CommonList, Post } from 'types/post';
@@ -10,12 +17,12 @@ type Props = {
 
 const Home: NextPage<Props> = ({ allPost }) => (
   <Layout>
-    <Stack spacing={6}>
-      <FirstView />
-      <Profile />
-      <Skill />
-      <Works posts={allPost.contents} />
-    </Stack>
+    <FirstView />
+    <Profile />
+    <Skill />
+    <Works posts={allPost.contents} />
+    <Contact />
+    <EndMessage />
   </Layout>
 );
 

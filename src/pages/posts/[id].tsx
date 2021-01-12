@@ -10,6 +10,10 @@ type Props = {
   post: PostType;
 };
 
+type Params = {
+  id: string;
+};
+
 const Post: VFC<Props> = ({ post }) => {
   const router = useRouter();
 
@@ -22,12 +26,6 @@ const Post: VFC<Props> = ({ post }) => {
       <WorkPostDetail post={post} />
     </Layout>
   );
-};
-
-export default Post;
-
-type Params = {
-  id: string;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -52,3 +50,5 @@ export const getStaticProps: GetStaticProps<Props> = async (
 
   return { props: { post } };
 };
+
+export default Post;

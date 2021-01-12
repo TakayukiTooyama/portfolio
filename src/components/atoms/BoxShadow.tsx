@@ -2,21 +2,24 @@ import { Box, BoxProps, useColorMode } from '@chakra-ui/react';
 import React, { FC } from 'react';
 
 type Props = BoxProps & {
-  inner?: boolean;
+  box?: string;
+  align?: string;
 };
 
 const BoxShadow: FC<Props> = (props) => {
-  const { children, inner = true } = props;
+  const { children, box = '', align = '' } = props;
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
-  const shadow = inner
-    ? 'inset 5px 5px 5px #babecc, inset -7px -11px 10px #f5f5f5'
-    : 'inset -3px -4px 5px #babecc, inset 4px 5px 10px #f5f5f5';
-  const border = isDark ? '1px solid #30373D' : '';
-  const bgColor = { light: 'white', dark: 'gray.800' };
+  const shadow =
+    box === 'inner'
+      ? '2px 2px 4px #CAD4E2 inset, -2px -2px 4px #FFF inset'
+      : '4px 4px 8px #CAD4E2, -4px -4px 8px #FFF';
+  const border = isDark ? '1px solid #30373D' : 'none';
+  const bgColor = { light: 'gray.100', dark: 'gray.700' };
 
   return (
     <Box
+      align={align}
       bg={bgColor[colorMode]}
       boxShadow={isDark ? '' : shadow}
       border={border}

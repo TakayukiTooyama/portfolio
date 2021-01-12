@@ -5,22 +5,29 @@ type Props = BoxProps & {
   bgdark?: string;
   bglight?: string;
   colorDark?: string;
-  colorLight?: string;
+  colorlight?: string;
+  align?: string;
 };
 
 const DarkModeBox: FC<Props> = (props) => {
   const {
-    bglight = 'gray.200',
-    bgdark = 'gray.800',
+    bglight = 'gray.100',
+    bgdark = 'gray.900',
     colorDark = 'white',
-    colorLight = 'black',
+    colorlight = 'black',
     children,
+    align = '',
   } = props;
   const { colorMode } = useColorMode();
   const bgColor = { light: bglight, dark: bgdark };
-  const color = { light: colorLight, dark: colorDark };
+  const color = { light: colorlight, dark: colorDark };
   return (
-    <Box bg={bgColor[colorMode]} color={color[colorMode]} {...props}>
+    <Box
+      bg={bgColor[colorMode]}
+      color={color[colorMode]}
+      align={align}
+      {...props}
+    >
       {children}
     </Box>
   );
