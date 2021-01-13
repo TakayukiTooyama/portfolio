@@ -10,7 +10,11 @@ import {
   TwitterIcon,
   Wave,
 } from 'components/atoms';
+import { motion } from 'framer-motion';
+import { upDown } from 'lib/variants';
 import React, { VFC } from 'react';
+
+const MotionArrowDownIcon = motion.custom(ArrowDownIcon);
 
 const FirstView: VFC = () => (
   <>
@@ -19,6 +23,7 @@ const FirstView: VFC = () => (
       <Forest />
       <Box
         w="100%"
+        h="200px"
         pos="absolute"
         top="45%"
         left="50%"
@@ -38,7 +43,7 @@ const FirstView: VFC = () => (
         </HStack>
         <Box mb={8} />
 
-        <ArrowDownIcon w={8} h={8} />
+        <MotionArrowDownIcon w={8} h={8} animate="visible" variants={upDown} />
       </Box>
     </Box>
     <DarkModeBox

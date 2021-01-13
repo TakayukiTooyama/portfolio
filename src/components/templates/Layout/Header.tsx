@@ -3,11 +3,14 @@ import { DarkModeBox, HamburgerIcon } from 'components/atoms';
 import { DarkModeSwitch } from 'components/molecules';
 import { Nav, NavDrawer } from 'components/organisms';
 import useScroll from 'hooks/useScroll';
+import { useRouter } from 'next/dist/client/router';
 import React, { VFC } from 'react';
 
 const Header: VFC = () => {
   const { height } = useScroll();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
+  const path = router.pathname;
 
   return (
     <>
@@ -26,10 +29,12 @@ const Header: VFC = () => {
           transform={`translateY(${height})`}
           transition="transform 0.3s linear"
         >
-          {/* PC画面だけ表示 */}
-          <Box display={['none', 'none', 'block']}>
-            <Nav />
-          </Box>
+          {/* ホーム画面・PC画面だけ表示 */}
+          {path === '/' ? (
+            <Box display={['none', 'none', 'block']}>
+              <Nav />
+            </Box>
+          ) : null}
 
           {/* PC画面だけ表示 */}
           <Box display={['none', 'none', 'block']}>

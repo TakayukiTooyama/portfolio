@@ -47,32 +47,6 @@ const Works: VFC<Props> = ({ posts }) => (
                 <Box mb={4} />
               </Box>
             ))}
-          {posts &&
-            posts.map((post) => (
-              <Box key={post.slug} mx={3}>
-                <Link href={`/posts/${post.id}`} passHref>
-                  <Image
-                    w="100%"
-                    h={['200px', '150px']}
-                    maxW={['300px', '230px']}
-                    object-fit="cover"
-                    src={post.mainImage.url}
-                    alt={post.title}
-                    _hover={{
-                      transform: 'scale(1.05)',
-                      transition: 'all 0.4s ease',
-                      shadow: '2xl',
-                    }}
-                    shadow="base"
-                  />
-                </Link>
-                <Box mb={4} />
-                <Text fontSize="xl" align="center">
-                  {post.title}
-                </Text>
-                <Box mb={4} />
-              </Box>
-            ))}
         </Flex>
       </Element>
     </Container>
