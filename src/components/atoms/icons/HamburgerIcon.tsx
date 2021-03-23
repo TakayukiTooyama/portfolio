@@ -17,7 +17,6 @@ const Hamburger: VFC<Props> = ({ onClick }) => (
     display={['block', 'block', 'none']}
     onClick={onClick}
     _focus={{ shadow: 'none' }}
-    bgdark="gray.900"
   >
     <HamburgerIcon w={[5, 6]} h={[5, 6]} />
   </DarkModeBox>

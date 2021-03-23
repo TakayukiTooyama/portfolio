@@ -1,8 +1,6 @@
 import {
   WorkPostContent,
   WorkPostLink,
-  WorkPostSample,
-  WorkPostSpecification,
   WorkPostTop,
 } from 'components/templates';
 import React, { VFC } from 'react';
@@ -15,13 +13,14 @@ type Props = {
 const WorkPostDetail: VFC<Props> = ({ post }) => (
   <>
     <WorkPostTop title={post.title} date={post.date} />
-    <WorkPostSpecification
+    <WorkPostContent
       title={post.title}
       mockup={post.mockup.url}
       languages={post.languages}
+      content={post.content}
+      funcList={post.funcList}
+      sampleDetails={post.sampleDetails}
     />
-    <WorkPostContent />
-    <WorkPostSample sampleDetails={post.sampleDetails} />
     <WorkPostLink
       siteLink={post.siteLink}
       github={post.github}

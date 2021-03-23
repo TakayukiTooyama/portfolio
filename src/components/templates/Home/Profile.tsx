@@ -1,6 +1,5 @@
 import { Box, HStack, Image, Text } from '@chakra-ui/react';
 import {
-  Border,
   BoxShadow,
   DarkModeBox,
   GithubIcon,
@@ -9,6 +8,7 @@ import {
   SectionTitle,
   TwitterIcon,
 } from 'components/atoms';
+import Wave2 from 'components/atoms/boundary/Wave2';
 import { Container } from 'components/templates';
 import React, { VFC } from 'react';
 import { Element } from 'react-scroll';
@@ -46,12 +46,7 @@ const Profile: VFC = () => (
               <GithubIcon />
             </HStack>
           </Box>
-          <Box
-            w="100%"
-            maxW="400px"
-            textAlign={['center', 'center', 'left']}
-            lineHeight="1.5"
-          >
+          <Box w="100%" maxW="400px" textAlign="left" lineHeight="1.5">
             <Text mb={1}>遠山 宜志 新潟県出身21歳</Text>
             <Text mb={2}>
               フロント開発を中心として活動中。 <br />
@@ -64,13 +59,13 @@ const Profile: VFC = () => (
             </Text>
             <Text> 自分の作ったものを使っていただける。</Text>
             <Text> くだらないものでも笑いが生まれる。</Text>
-            <Text>信頼されるエンジニアを目指している</Text>
+            <Text>信頼されるエンジニアを目指している。</Text>
             <Box mb={8} />
           </Box>
         </BoxShadow>
       </Element>
     </Container>
-    <Border />
+    <Wave2 filllight="#374565" filldark="#1A212C" />
   </DarkModeBox>
 );
 

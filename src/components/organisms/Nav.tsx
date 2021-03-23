@@ -39,6 +39,7 @@ const Nav: VFC = () => {
       link: 'contact',
     },
   ];
+
   return (
     <Stack
       spacing={8}

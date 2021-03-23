@@ -18,7 +18,7 @@ const MotionArrowDownIcon = motion.custom(ArrowDownIcon);
 
 const FirstView: VFC = () => (
   <>
-    <Box align="center" pos="relative">
+    <Box align="center" pos="relative" overflow="hidden">
       <Sun />
       <Forest />
       <Box
@@ -47,13 +47,15 @@ const FirstView: VFC = () => (
       </Box>
     </Box>
     <DarkModeBox
-      h="400px"
       bglight="white"
       bgdark="#000"
       textAlign="center"
-      lineHeight="350px"
+      pt={24}
+      pb={48}
     >
-      <Text fontSize={['2xl', '3xl', '4xl']}>Welcome to My Portfolio</Text>
+      <Text fontSize={['4xl', '5xl']} fontWeight="bold">
+        Welcome to MyPortfolio
+      </Text>
     </DarkModeBox>
     <Wave filllight="#fff" filldark="#000" />
   </>

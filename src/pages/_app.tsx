@@ -7,11 +7,8 @@ import theme from 'theme';
 const MyApp: VFC<AppProps> = ({ Component, pageProps }) => (
   <>
     <Head>
-      <title>TakayukiTooyama Portfolio</title>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Capriola&display=swap"
-        rel="stylesheet"
-      />
+      <title>ポートフォリオ | Takayuki Tooyama</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <ChakraProvider resetCSS theme={theme}>
       <Component {...pageProps} />

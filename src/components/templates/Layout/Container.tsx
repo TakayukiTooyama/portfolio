@@ -10,8 +10,9 @@ const SectionContainer: FC<Props> = ({
   children,
   maxW = '2xl',
   align = '',
+  ...props
 }) => (
-  <Container maxW={maxW} py={32} align={align}>
+  <Container maxW={maxW} py={24} align={align} {...props}>
     {children}
   </Container>
 );

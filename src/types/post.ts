@@ -19,9 +19,7 @@ export type CommonList<T> = {
 export type SampleDetail = {
   fieldId: string;
   alt: string;
-  src: string;
-  code?: string;
-  funcList: string;
+  sampleImage: { url: string };
 };
 
 // 上記のCommonList<T>に入る型
@@ -37,6 +35,8 @@ export type Post = CommonItem & {
   prevSlug: string;
   mockup: { url: string };
   mainImage: { url: string };
+  funcList: string;
+  content: string;
   sampleDetails: SampleDetail[];
 };
 

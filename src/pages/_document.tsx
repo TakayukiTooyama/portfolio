@@ -15,6 +15,10 @@ export default class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <meta name="description" content="TakayukiTooyama Portfolio" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Capriola&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <ColorModeScript />

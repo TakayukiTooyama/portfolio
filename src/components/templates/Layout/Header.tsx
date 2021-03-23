@@ -19,7 +19,7 @@ const Header: VFC = () => {
         bgdark="none"
         pos="fixed"
         top="10px"
-        right="25px"
+        right="16px"
         zIndex="1"
       >
         <Stack

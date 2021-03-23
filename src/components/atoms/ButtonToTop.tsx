@@ -8,7 +8,13 @@ const ButtonToTop: VFC = () => {
     scroll.scrollToTop();
   };
   return (
-    <BoxShadow borderRadius="10px" onClick={scrollToTop} w="48px" h="48px">
+    <BoxShadow
+      borderRadius="10px"
+      onClick={scrollToTop}
+      w="48px"
+      h="48px"
+      cursor="pointer"
+    >
       <ChevronUpIcon w={12} h={12} />
     </BoxShadow>
   );

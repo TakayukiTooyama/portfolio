@@ -1,5 +1,6 @@
 import { Box, Stack } from '@chakra-ui/react';
-import { Border, DarkModeBox, SectionTitle } from 'components/atoms';
+import { DarkModeBox, SectionTitle } from 'components/atoms';
+import Wave2 from 'components/atoms/boundary/Wave2';
 import { SkillCard } from 'components/molecules';
 import { Container } from 'components/templates';
 import React, { VFC } from 'react';
@@ -28,7 +29,7 @@ const Skill: VFC = () => {
           </Stack>
         </Element>
       </Container>
-      <Border />
+      <Wave2 />
     </DarkModeBox>
   );
 };
