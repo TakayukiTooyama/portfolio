@@ -1,5 +1,5 @@
 import { Box, Divider, Image, SimpleGrid, Stack, Text } from '@chakra-ui/react';
-import React, { useState, VFC } from 'react';
+import React, { useEffect, useState, VFC } from 'react';
 import type { SampleDetail } from 'types/post';
 
 type Props = {
@@ -8,6 +8,11 @@ type Props = {
 
 const WorkPostSample: VFC<Props> = ({ sampleDetails }) => {
   const [selectecdSample, setSelectecdSample] = useState(sampleDetails[0]);
+
+  useEffect(() => {
+    setSelectecdSample(sampleDetails[0]);
+  }, [sampleDetails]);
+
   return (
     <Stack>
       <Text fontSize="18px">サンプル</Text>
@@ -38,6 +43,7 @@ const WorkPostSample: VFC<Props> = ({ sampleDetails }) => {
                 transition: 'all 0.4s ease',
                 shadow: '2xl',
               }}
+              cursor="pointer"
             />
           ))}
       </SimpleGrid>
