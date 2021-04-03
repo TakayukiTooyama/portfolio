@@ -10,7 +10,6 @@ const TwitterIcon: VFC<Props> = ({ motion }) => (
   <LinkIcon
     href="https://twitter.com/tooyama107"
     icon={FaTwitterSquare}
-    color="#1DA1F2"
     motion={motion}
   />
 );

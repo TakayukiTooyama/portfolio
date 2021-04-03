@@ -10,7 +10,6 @@ const GithubIcon: VFC<Props> = ({ motion }) => (
   <LinkIcon
     href="https://github.com/TakayukiTooyama"
     icon={FaGithubSquare}
-    color="black"
     motion={motion}
   />
 );
