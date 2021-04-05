@@ -17,6 +17,7 @@ const LinkIcon: VFC<Props> = ({ href, icon, color, motion = true }) => {
         as={icon}
         w={8}
         h={8}
+        transition="all 0.2s ease-out"
         _hover={{
           color,
           transform: `scale(${scale})`,

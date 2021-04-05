@@ -29,6 +29,7 @@ const Works: VFC<Props> = ({ posts }) => (
                     backgroundImage={`url(${post.mainImage.url})`}
                     backgroundPosition="center"
                     backgroundSize="cover"
+                    transition="all 0.2s ease"
                     _hover={{
                       transform: 'scale(1.05)',
                       transition: 'all 0.4s ease',

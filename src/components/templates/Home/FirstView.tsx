@@ -28,8 +28,9 @@ const FirstView: VFC = () => (
         top="45%"
         left="50%"
         transform="translate(-50%, -50%)"
+        px={4}
       >
-        <Heading as="h1" size="2xl">
+        <Heading as="h1" size="xl">
           Takayuki Tooyama
         </Heading>
         <Text fontSize="xl">Front Enginner</Text>
@@ -47,15 +48,21 @@ const FirstView: VFC = () => (
       </Box>
     </Box>
     <DarkModeBox
-      bglight="white"
+      bglight="#fff"
       bgdark="#000"
-      textAlign="center"
-      pt={24}
-      pb={48}
+      fontWeight="bold"
+      pt={[0, 0, 12]}
+      pb={[40, 20]}
+      px={4}
+      display="flex"
+      justifyContent="center"
+      align="center"
+      flexDirection={['column', 'column', 'row']}
     >
-      <Text fontSize={['4xl', '5xl']} fontWeight="bold">
-        Welcome to MyPortfolio
+      <Text fontSize={['5xl']} mr={[0, 2]}>
+        Welcome to
       </Text>
+      <Text fontSize={['4xl', '5xl']}>MyPortfolio</Text>
     </DarkModeBox>
     <Wave filllight="#fff" filldark="#000" />
   </>

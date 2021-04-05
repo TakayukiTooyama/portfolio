@@ -5,6 +5,7 @@ export { default as SvgIcon } from 'components/atoms/boundary/Forest';
 export { default as Forest } from 'components/atoms/boundary/Forest';
 export { default as Sun } from 'components/atoms/boundary/Sun';
 export { default as Wave } from 'components/atoms/boundary/Wave';
+export { default as Wave2 } from 'components/atoms/boundary/Wave2';
 export { default as BoxShadow } from 'components/atoms/BoxShadow';
 export { default as ButtonToTop } from 'components/atoms/ButtonToTop';
 export { default as DarkModeBox } from 'components/atoms/DarkModeBox';

@@ -11,7 +11,11 @@ const Wave2: VFC<Props> = ({ filllight = '#EBECF2', filldark = '#111111' }) => {
   const { colorMode } = useColorMode();
   const fill = { light: filllight, dark: fillDark };
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+      viewBox="0 0 1440 320"
+    >
       <path
         fill={fill[colorMode]}
         fillOpacity="1"
