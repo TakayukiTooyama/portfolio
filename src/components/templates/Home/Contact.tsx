@@ -1,13 +1,10 @@
-import { Box, Center, Flex, Stack, Text } from '@chakra-ui/react';
-import {
-  DarkModeBox,
-  FormButton,
-  FormInput,
-  SectionTitle,
-  Wave,
-} from 'components/atoms';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { Box, Flex, Stack, Text } from '@chakra-ui/react';
+import { DarkModeBox, FormButton, SectionTitle, Wave } from 'components/atoms';
 import { Container } from 'components/templates';
-import { Form, Formik, FormikProps } from 'formik';
+import { Formik } from 'formik';
+import { InputControl, TextareaControl } from 'formik-chakra-ui';
 import useFormSubmit from 'hooks/useFormSubmit';
 import React, { VFC } from 'react';
 import { Element } from 'react-scroll';
@@ -19,76 +16,70 @@ export type Values = {
   comment: string;
 };
 
+const initialValues: Values = {
+  name: '',
+  email: '',
+  comment: '',
+};
+
 const Contact: VFC = () => {
-  const initialValues: Values = {
-    name: '',
-    email: '',
-    comment: '',
-  };
-  const { errorMessage, setErrorMessage, onSubmit } = useFormSubmit(
-    initialValues
-  );
+  const { onSubmit } = useFormSubmit(initialValues);
 
   return (
     <DarkModeBox bglight="#384464" bgdark="gray.800" colorlight="white">
       <Container>
         <Element name="contact">
           <SectionTitle title="Contact me" color="white" mb={6} />
-          <Box w="100%">
+          <Box w="100%" mb={12}>
             <Text maxW="400px" mx="auto" fontSize={['sm', 'md', 'md']}>
               最後までご覧いただきありがとうございました。
               このサイトを通して、私のことを少しでも知っていただけたのなら嬉しいです。
               もしこのサイトや私について何かコメントがありましたら、下記フォームをご利用ください。
             </Text>
           </Box>
-          <Box mb={12} />
+
           <Formik
             initialValues={initialValues}
             validationSchema={yup.object({
-              name: yup.string().required('必須項目'),
-              email: yup.string().required('必須項目'),
-              comment: yup.string().required('必須項目'),
+              name: yup.string().required('必須項目です🙏'),
+              email: yup.string().required('必須項目です🙏'),
+              comment: yup.string().required('必須項目です🙏'),
             })}
-            onSubmit={(values, actions) => onSubmit(values, actions)}
+            onSubmit={(values, action) => onSubmit(values, action)}
           >
-            {({ isValid, dirty, isSubmitting }: FormikProps<Values>) => (
-              <Form>
-                <Stack spacing={4}>
-                  <Flex direction={['column', 'row', 'row']}>
-                    <FormInput
-                      label="Name"
-                      name="name"
-                      setErrorMessage={setErrorMessage}
-                    />
-                    <Box mb={4} mr={[0, 2, 2]} />
-                    <FormInput
-                      label="Email"
-                      name="email"
-                      type="email"
-                      setErrorMessage={setErrorMessage}
-                    />
-                  </Flex>
-                  <FormInput
-                    label="Comment"
-                    name="comment"
-                    textArea
-                    setErrorMessage={setErrorMessage}
+            {({ handleSubmit, isValid, dirty, isSubmitting }) => (
+              <Stack
+                as="form"
+                onSubmit={handleSubmit as any}
+                spacing={4}
+                alignItems="center"
+              >
+                <Flex direction={['column', 'row', 'row']} w="100%">
+                  <InputControl
+                    isRequired
+                    name="name"
+                    label="Name"
+                    mb={4}
+                    mr={[0, 2, 2]}
                   />
-                </Stack>
-                <Box pb={4} />
-                <Center>
-                  <FormButton
-                    type="submit"
-                    label="Send"
-                    isLoading={isSubmitting}
-                    disabled={!isValid || !dirty}
-                  />
-                </Center>
-                <Box pb={4} />
-                <Text textAlign="center" color="red.400">
-                  {errorMessage}
-                </Text>
-              </Form>
+                  <InputControl isRequired name="email" label="Email" />
+                </Flex>
+                <TextareaControl
+                  isRequired
+                  name="comment"
+                  label="Comment"
+                  mb={8}
+                />
+
+                <FormButton
+                  w="100%"
+                  maxW="sm"
+                  type="submit"
+                  label="Send"
+                  isLoading={isSubmitting}
+                  isDisabled={!isValid || !dirty}
+                />
+              </Stack>
             )}
           </Formik>
         </Element>

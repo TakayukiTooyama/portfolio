@@ -1,10 +1,5 @@
 import { DrawerBody as Body, Flex, Stack } from '@chakra-ui/react';
-import {
-  GithubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  TwitterIcon,
-} from 'components/atoms';
+import { GithubIcon, TwitterIcon, ZennIcon } from 'components/atoms';
 import { DarkModeSwitch } from 'components/molecules';
 import { Nav } from 'components/organisms';
 import React, { VFC } from 'react';
@@ -15,9 +10,8 @@ const DrawerBody: VFC = () => (
       <Nav />
       <Flex wrap="wrap" justify="center" w="80px">
         <TwitterIcon />
-        <InstagramIcon />
-        <LinkedInIcon />
         <GithubIcon />
+        <ZennIcon />
       </Flex>
       <DarkModeSwitch />
     </Stack>

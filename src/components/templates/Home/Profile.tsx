@@ -3,10 +3,9 @@ import {
   BoxShadow,
   DarkModeBox,
   GithubIcon,
-  InstagramIcon,
-  LinkedInIcon,
   SectionTitle,
   TwitterIcon,
+  ZennIcon,
 } from 'components/atoms';
 import Wave2 from 'components/atoms/boundary/Wave2';
 import { Container } from 'components/templates';
@@ -15,18 +14,18 @@ import { Element } from 'react-scroll';
 
 const Profile: VFC = () => (
   <DarkModeBox bglight="gray.100">
-    <Container>
+    <Container maxW="3xl">
       <Element name="profile">
         <SectionTitle title="Profile" mb={6} />
         <BoxShadow
-          box="inner"
+          boxStyle="inner"
           py={[8, 8, 12]}
-          px={[4, 4, 8]}
+          px={8}
           align="center"
           alignItems="center"
           display={['block', 'block', 'flex']}
         >
-          <Box w="100%" mb={[10, 10, 0]}>
+          <Box w={['100%', '100%', '45%']} mb={[10, 10, 0]}>
             <Image
               borderRadius="full"
               boxSize="150px"
@@ -41,25 +40,39 @@ const Profile: VFC = () => (
             </Text>
             <HStack justify="center" spacing={4}>
               <TwitterIcon />
-              <InstagramIcon />
-              <LinkedInIcon />
               <GithubIcon />
+              <ZennIcon />
             </HStack>
           </Box>
-          <Box w="100%" maxW="400px" textAlign="center" lineHeight="1.5">
-            <Text mb={1}>遠山 宜志 新潟県出身21歳</Text>
-            <Text mb={4}>
-              フロント開発を中心として活動中。 <br />
+          <Box
+            w={['100%', '100%', '55%']}
+            maxW="400px"
+            textAlign="center"
+            lineHeight="1.5"
+          >
+            <Text mb={4} lineHeight="1.7">
+              遠山 宜志 新潟県出身21歳
+              <br />
+              フロントエンドを中心として活動中。
+              <br />
               新しい技術が大好き。
             </Text>
-            <Text mb={4}>
+
+            <Text mb={4} textAlign="justify">
               大学では、12年続けてきた陸上をするためにスポーツを専攻。
               スポーツをやる反面、小さい時から自分で想像したものを作ることが好きだった。
               私は探しに探しプログラミングに出会った。
             </Text>
-            <Text> 自分の作ったものを使っていただける。</Text>
-            <Text> くだらないものでも笑いが生まれる。</Text>
-            <Text>信頼されるエンジニアを目指している。</Text>
+            <Text mb={4} textAlign="justify">
+              自分の作ったものが実際に使われている時の喜び、
+              身近な人の悩みを解決した時に想像以上に驚かれたり、喜ばれたりしたときの気持ちは忘れられない。
+              どんどんエンジニアになりたいという気持ちが高まっていった。
+            </Text>
+            <Text>
+              私はこれからも経験を積み、
+              <br />
+              圧倒的に信頼されるエンジニアを目指している。
+            </Text>
             <Box />
           </Box>
         </BoxShadow>

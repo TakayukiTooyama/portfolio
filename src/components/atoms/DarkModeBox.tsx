@@ -6,7 +6,6 @@ type Props = BoxProps & {
   bglight?: string;
   colorDark?: string;
   colorlight?: string;
-  align?: string;
 };
 
 const DarkModeBox: FC<Props> = (props) => {
@@ -16,18 +15,12 @@ const DarkModeBox: FC<Props> = (props) => {
     colorDark = 'white',
     colorlight = 'black',
     children,
-    align = '',
   } = props;
   const { colorMode } = useColorMode();
   const bgColor = { light: bglight, dark: bgdark };
   const color = { light: colorlight, dark: colorDark };
   return (
-    <Box
-      bg={bgColor[colorMode]}
-      color={color[colorMode]}
-      align={align}
-      {...props}
-    >
+    <Box bg={bgColor[colorMode]} color={color[colorMode]} {...props}>
       {children}
     </Box>
   );

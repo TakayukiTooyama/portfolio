@@ -4,6 +4,7 @@ import {
   FormErrorMessage,
   FormLabel,
   Input,
+  InputProps,
   Textarea,
 } from '@chakra-ui/react';
 import type { FieldProps } from 'formik';
@@ -11,7 +12,7 @@ import { Field } from 'formik';
 import type { Dispatch, SetStateAction } from 'react';
 import React, { VFC } from 'react';
 
-type Props = {
+type Props = InputProps & {
   label: string;
   name: string;
   type?: 'text' | 'email';
@@ -22,9 +23,9 @@ type Props = {
 const FormInput: VFC<Props> = ({
   label,
   name,
-  type = 'text',
   textArea = false,
   setErrorMessage,
+  ...props
 }) => (
   <Field name={name}>
     {({ field, form }: FieldProps<any>) => (
@@ -36,8 +37,8 @@ const FormInput: VFC<Props> = ({
           <Input
             {...field}
             id={name}
-            type={type}
             onFocus={() => setErrorMessage('')}
+            {...props}
           />
         )}
         <FormErrorMessage color="red.400">{form.errors[name]}</FormErrorMessage>

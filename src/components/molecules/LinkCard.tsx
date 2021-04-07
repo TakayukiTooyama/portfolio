@@ -8,7 +8,13 @@ type Props = {
 };
 
 const LinkCard: VFC<Props> = ({ name, href }) => (
-  <BoxShadow px={8} py={8} textAlign="center" borderRadius="10px" box="inner">
+  <BoxShadow
+    px={8}
+    py={8}
+    textAlign="center"
+    borderRadius="10px"
+    boxStyle="inner"
+  >
     <Stack
       direction={['column', 'row']}
       align="center"

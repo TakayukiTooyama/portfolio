@@ -3,15 +3,19 @@ import { ButtonToTop, DarkModeBox } from 'components/atoms';
 import React, { VFC } from 'react';
 
 const EndMessage: VFC = () => (
-  <>
-    <DarkModeBox align="center">
+  <DarkModeBox>
+    <Box pb={12} align="center">
       <Box pb={16} pt={24}>
-        <Text fontSize={['2xl', '3xl', '4xl']}>Thank you for coming</Text>
+        <Text
+          fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
+          fontFamily={`'Capriola',"Helvetica Neue"`}
+        >
+          Thank you for coming
+        </Text>
       </Box>
       <ButtonToTop />
-      <Box pb={12} />
-    </DarkModeBox>
-  </>
+    </Box>
+  </DarkModeBox>
 );
 
 export default EndMessage;

@@ -3,17 +3,9 @@ import React, { FC } from 'react';
 
 type Props = ButtonProps & {
   label: string;
-  type?: 'button' | 'submit' | 'reset';
-  isLoading: boolean;
-  disabled: boolean;
 };
 
-const FormButton: FC<Props> = ({
-  label = '',
-  type = 'button',
-  isLoading,
-  disabled,
-}) => {
+const FormButton: FC<Props> = ({ label = '', ...props }) => {
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
   const shadow = isDark
@@ -30,11 +22,7 @@ const FormButton: FC<Props> = ({
       color={color[colorMode]}
       bg={bgColor[colorMode]}
       _hover={{ boxShadow: hoverShadow, border }}
-      w="100%"
-      maxW="200px"
-      type={type}
-      isLoading={isLoading}
-      disabled={disabled}
+      {...props}
     >
       {label}
     </Button>

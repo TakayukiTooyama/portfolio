@@ -4,11 +4,10 @@ import {
   DarkModeBox,
   Forest,
   GithubIcon,
-  InstagramIcon,
-  LinkedInIcon,
   Sun,
   TwitterIcon,
   Wave,
+  ZennIcon,
 } from 'components/atoms';
 import { motion } from 'framer-motion';
 import { upDown } from 'lib/variants';
@@ -30,19 +29,22 @@ const FirstView: VFC = () => (
         transform="translate(-50%, -50%)"
         px={4}
       >
-        <Heading as="h1" size="xl">
+        <Heading as="h1" size="2xl" mb={2}>
           Takayuki Tooyama
         </Heading>
-        <Text fontSize="xl">Front Enginner</Text>
-        <Box mb={4} />
+        <Text
+          fontSize={['lg', 'xl', '2xl']}
+          mb={8}
+          fontFamily={`'Capriola',"Helvetica Neue"`}
+        >
+          FrontEnd Enginner
+        </Text>
 
-        <HStack justify="center" spacing={4}>
-          <TwitterIcon motion />
-          <InstagramIcon motion />
-          <LinkedInIcon motion />
-          <GithubIcon motion />
+        <HStack justify="center" spacing={4} mb={8}>
+          <TwitterIcon />
+          <GithubIcon />
+          <ZennIcon />
         </HStack>
-        <Box mb={8} />
 
         <MotionArrowDownIcon w={8} h={8} animate="visible" variants={upDown} />
       </Box>
@@ -55,14 +57,15 @@ const FirstView: VFC = () => (
       pb={[40, 20]}
       px={4}
       display="flex"
+      alignItems="center"
       justifyContent="center"
-      align="center"
-      flexDirection={['column', 'column', 'row']}
+      flexDirection={{ base: 'column', md: 'row' }}
+      fontFamily={`'Capriola',"Helvetica Neue"`}
     >
-      <Text fontSize={['5xl']} mr={[0, 2]}>
+      <Text fontSize={{ base: '4xl', md: '5xl' }} mr={[0, 2]}>
         Welcome to
       </Text>
-      <Text fontSize={['4xl', '5xl']}>MyPortfolio</Text>
+      <Text fontSize={{ base: '3xl', md: '5xl' }}>MyPortfolio</Text>
     </DarkModeBox>
     <Wave filllight="#fff" filldark="#000" />
   </>

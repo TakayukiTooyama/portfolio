@@ -1,9 +1,6 @@
-// import { Box, useColorMode } from '@chakra-ui/react';
-import { useColorMode } from '@chakra-ui/react';
-import Link from 'next/link';
-import React, { VFC } from 'react';
-
-import { BoxShadow } from '.';
+import { Link, useColorModeValue } from '@chakra-ui/react';
+import { BoxShadow } from 'components/atoms';
+import React, { useState, VFC } from 'react';
 
 type Props = {
   href: string;
@@ -12,23 +9,38 @@ type Props = {
 };
 
 const LinkButton: VFC<Props> = ({ href = '', maxW = '200px', h = '50px' }) => {
-  const { colorMode } = useColorMode();
-  const bgColor = { light: 'gray.100', dark: 'gray.900' };
+  const [boxStyle, setBoxStyle] = useState('');
+  const onClick = () => {
+    setBoxStyle('inner');
+    setTimeout(() => {
+      setBoxStyle('');
+    }, 3000);
+  };
+
   return (
-    <Link href={href} passHref>
-      <BoxShadow
-        w="100%"
-        maxW={maxW}
-        h={h}
-        lineHeight={h}
+    <BoxShadow
+      bg={useColorModeValue('gray.100', 'gray.900')}
+      borderRadius="30px"
+      w="100%"
+      boxStyle={boxStyle}
+      maxW={maxW}
+      cursor="pointer"
+      h={h}
+      _hover={{ opacity: 0.8 }}
+      onClick={onClick}
+      lineHeight={h}
+      textDecoration="none"
+    >
+      <Link
+        isExternal
+        href={href}
+        display="block"
         borderRadius="30px"
-        bg={bgColor[colorMode]}
-        cursor="pointer"
-        _hover={{ opacity: 0.8 }}
+        _hover={{ textDecoration: 'none' }}
       >
         Click
-      </BoxShadow>
-    </Link>
+      </Link>
+    </BoxShadow>
   );
 };
 
