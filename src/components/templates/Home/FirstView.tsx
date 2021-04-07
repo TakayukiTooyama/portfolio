@@ -29,11 +29,11 @@ const FirstView: VFC = () => (
         transform="translate(-50%, -50%)"
         px={4}
       >
-        <Heading as="h1" size="2xl" mb={2}>
+        <Heading as="h1" fontSize={['3xl', '4xl', '5xl']} mb={1}>
           Takayuki Tooyama
         </Heading>
         <Text
-          fontSize={['lg', 'xl', '2xl']}
+          fontSize={['lg', 'xl', 'xl']}
           mb={8}
           fontFamily={`'Capriola',"Helvetica Neue"`}
         >
