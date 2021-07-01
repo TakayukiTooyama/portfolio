@@ -14,7 +14,7 @@ const Skill: VFC = () => {
       text: 'JavaScript, React, Redux, TypeScript, Next.js, Gatsby',
     },
     { title: 'BackDev', text: 'Node.js, Firebase' },
-    { title: 'Other Tool', text: 'git, yarn, AdobeXD, Figma' },
+    { title: 'Other', text: 'AWS, AdobeXD, Figma' },
   ];
   return (
     <DarkModeBox bglight="brand.600" bgdark="gray.800">
