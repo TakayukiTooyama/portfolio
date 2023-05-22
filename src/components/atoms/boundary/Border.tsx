@@ -1,7 +1,7 @@
 import { Box, useColorMode } from '@chakra-ui/react';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
-const Border: VFC = () => {
+const Border: FC = () => {
   const { colorMode } = useColorMode();
   const color1 = { light: '#FFFFFF', dark: '#292929' };
   const color2 = { light: '#CAD4E2', dark: '#1A212C' };

@@ -1,5 +1,5 @@
 import { ArrowDownIcon } from '@chakra-ui/icons';
-import { Box, Heading, HStack, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, HStack, Text } from '@chakra-ui/react';
 import {
   DarkModeBox,
   Forest,
@@ -11,13 +11,13 @@ import {
 } from 'components/atoms';
 import { motion } from 'framer-motion';
 import { upDown } from 'lib/variants';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
-const MotionArrowDownIcon = motion.custom(ArrowDownIcon);
+const MotionArrowDownIcon = motion(ArrowDownIcon);
 
-const FirstView: VFC = () => (
+const FirstView: FC = () => (
   <>
-    <Box align="center" pos="relative" overflow="hidden">
+    <Box  textAlign="center" pos="relative" overflow="hidden">
       <Sun />
       <Forest />
       <Box
@@ -37,13 +37,13 @@ const FirstView: VFC = () => (
           mb={8}
           fontFamily={`'Capriola',"Helvetica Neue"`}
         >
-          FrontEnd Enginner
+          FrontEnd Engineer
         </Text>
 
-        <HStack justify="center" spacing={4} mb={8}>
+        <HStack justifyContent="center" mb={8} spacing={4}>
           <TwitterIcon />
           <GithubIcon />
-          <ZennIcon />
+          {/* <ZennIcon /> */}
         </HStack>
 
         <MotionArrowDownIcon w={8} h={8} animate="visible" variants={upDown} />

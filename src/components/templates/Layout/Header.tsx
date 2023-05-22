@@ -4,9 +4,9 @@ import { DarkModeSwitch } from 'components/molecules';
 import { Nav, NavDrawer } from 'components/organisms';
 import useScroll from 'hooks/useScroll';
 import { useRouter } from 'next/dist/client/router';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
-const Header: VFC = () => {
+const Header: FC = () => {
   const { height } = useScroll();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();

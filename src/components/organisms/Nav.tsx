@@ -1,7 +1,7 @@
 import { Stack } from '@chakra-ui/react';
 import { LinkText } from 'components/atoms';
 import MotionBox from 'components/atoms/MotionBox';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
 const variants = {
   open: {
@@ -20,7 +20,7 @@ const variants = {
   },
 };
 
-const Nav: VFC = () => {
+const Nav: FC = () => {
   const contents = [
     {
       name: 'Profile',

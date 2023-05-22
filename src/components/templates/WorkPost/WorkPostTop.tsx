@@ -2,14 +2,14 @@ import { Heading, Text } from '@chakra-ui/react';
 import { Border, DarkModeBox } from 'components/atoms';
 import { Container } from 'components/templates';
 import dayjs from 'dayjs';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
 type Props = {
   title: string;
   date: Date;
 };
 
-const WorkPostTop: VFC<Props> = ({ title, date }) => {
+const WorkPostTop: FC<Props> = ({ title, date }) => {
   const dateFormat = dayjs(date).format('YYYY/MM/DD');
   return (
     <DarkModeBox>

@@ -1,12 +1,12 @@
 import { Box, Divider, Image, SimpleGrid, Stack, Text } from '@chakra-ui/react';
-import React, { useEffect, useState, VFC } from 'react';
+import React, { useEffect, useState, FC } from 'react';
 import type { SampleDetail } from 'types/post';
 
 type Props = {
   sampleDetails: SampleDetail[];
 };
 
-const WorkPostSample: VFC<Props> = ({ sampleDetails }) => {
+const WorkPostSample: FC<Props> = ({ sampleDetails }) => {
   const [selectecdSample, setSelectecdSample] = useState(sampleDetails[0]);
 
   useEffect(() => {

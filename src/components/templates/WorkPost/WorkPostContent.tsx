@@ -1,7 +1,7 @@
 import { Box, Divider, Flex, Image, Stack, Text } from '@chakra-ui/react';
 import { Border, DarkModeBox, SectionTitle } from 'components/atoms';
 import { Container, WorkPostSample } from 'components/templates';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import { Element } from 'react-scroll';
 import { SampleDetail } from 'types/post';
 
@@ -14,7 +14,7 @@ type Props = {
   sampleDetails: SampleDetail[];
 };
 
-const WorkPostContent: VFC<Props> = ({
+const WorkPostContent: FC<Props> = ({
   title,
   mockup,
   languages,

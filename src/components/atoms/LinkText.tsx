@@ -1,6 +1,6 @@
 import { Text } from '@chakra-ui/react';
 import styled from '@emotion/styled';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-scroll';
 
 type Props = {
@@ -13,7 +13,7 @@ const LinkStyle = styled(Link)`
   cursor: pointer;
 `;
 
-const LinkText: VFC<Props> = ({ name, link }) => (
+const LinkText: FC<Props> = ({ name, link }) => (
   <LinkStyle
     activeClass="active"
     to={link}

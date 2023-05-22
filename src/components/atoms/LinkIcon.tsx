@@ -1,5 +1,5 @@
 import { Icon, Link } from '@chakra-ui/react';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import { IconType } from 'react-icons';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
   motion?: boolean;
 };
 
-const LinkIcon: VFC<Props> = ({ href, icon, color, motion = true }) => {
+const LinkIcon: FC<Props> = ({ href, icon, color, motion = true }) => {
   const scale = motion ? '1.2' : '1.0';
   return (
     <Link href={href} isExternal>

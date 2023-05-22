@@ -3,18 +3,18 @@ import { DarkModeBox, SectionTitle } from 'components/atoms';
 import Wave2 from 'components/atoms/boundary/Wave2';
 import { SkillCard } from 'components/molecules';
 import { Container } from 'components/templates';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import { Element } from 'react-scroll';
 
-const Skill: VFC = () => {
+const Skill: FC = () => {
   const cardContents = [
-    { title: 'MarkUp', text: 'HTML, CSS, TailwindCSS, ChakraUI, Sass(Scss)' },
+    { title: 'Design', text: 'TailwindCSS, RadixUI, Mantine, ChakraUI, HTML, CSS, Sass(Scss)' },
     {
-      title: 'FrontDev',
-      text: 'JavaScript, React, Redux, TypeScript, Next.js, Gatsby',
+      title: 'FrontEnd',
+      text: 'Next.js, React, TypeScript',
     },
-    { title: 'BackDev', text: 'Node.js, Firebase' },
-    { title: 'Other', text: 'AWS, AdobeXD, Figma' },
+    { title: 'BackEnd', text: 'Node.js, Python, Pytorch, Ruby, Firebase' },
+    { title: 'Other', text: 'AWS, Figma, Notion' },
   ];
   return (
     <DarkModeBox bglight="brand.600" bgdark="gray.800">

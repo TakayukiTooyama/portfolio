@@ -3,21 +3,19 @@ import {
   ChakraProps,
   ComponentWithAs,
   forwardRef,
+  shouldForwardProp,
 } from '@chakra-ui/react';
 import { isValidMotionProp, motion, MotionProps } from 'framer-motion';
+import { FC } from 'react';
 
 type MotionBoxProps = Omit<ChakraProps, keyof MotionProps> &
   MotionProps & {
     as?: React.ElementType;
   };
 
-const MotionBox = motion.custom(
-  forwardRef<MotionBoxProps, 'div'>((props, ref) => {
-    const chakraProps = Object.fromEntries(
-      Object.entries(props).filter(([key]) => !isValidMotionProp(key))
-    );
-    return <chakra.div ref={ref} {...chakraProps} />;
-  })
-) as ComponentWithAs<'div', MotionBoxProps>;
+
+  const MotionBox: FC<MotionBoxProps> = chakra(motion.div, {
+  shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+});
 
 export default MotionBox;

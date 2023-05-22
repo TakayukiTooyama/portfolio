@@ -1,7 +1,7 @@
 import { Icon, Link, useColorModeValue } from '@chakra-ui/react';
-import { VFC } from 'react';
+import { FC } from 'react';
 
-const ZennIcon: VFC = () => (
+const ZennIcon: FC = () => (
   <Link href="https://zenn.dev/tooyama" isExternal>
     <Icon
       viewBox="0 0 24 24"

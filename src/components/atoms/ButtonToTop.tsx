@@ -1,9 +1,9 @@
 import { ChevronUpIcon } from '@chakra-ui/icons';
 import { BoxShadow } from 'components/atoms';
-import React, { useState, VFC } from 'react';
+import React, { useState, FC } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 
-const ButtonToTop: VFC = () => {
+const ButtonToTop: FC = () => {
   const [boxStyle, setBoxStyle] = useState('');
   const scrollToTop = () => {
     scroll.scrollToTop();

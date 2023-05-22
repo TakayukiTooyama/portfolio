@@ -3,14 +3,14 @@ import {
   WorkPostLink,
   WorkPostTop,
 } from 'components/templates';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import type { Post } from 'types/post';
 
 type Props = {
   post: Post;
 };
 
-const WorkPostDetail: VFC<Props> = ({ post }) => (
+const WorkPostDetail: FC<Props> = ({ post }) => (
   <>
     <WorkPostTop title={post.title} date={post.date} />
     <WorkPostContent

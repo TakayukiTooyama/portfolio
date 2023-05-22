@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
 const Polygon = styled.polygon`
   opacity: 1;
@@ -10,7 +10,7 @@ const Svg = styled.svg`
   height: '100px';
 `;
 
-const Slash: VFC = () => (
+const Slash: FC = () => (
   <Svg viewBox="0 0 1600 200">
     <polygon fill="#fff" points="-4,24 800,198 1604,24 1604,204 -4,204 " />
     <Polygon

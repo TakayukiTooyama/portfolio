@@ -3,7 +3,7 @@ import { getAllPost, getPostById } from 'lib/postApi';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import ErrorPage from 'next/error';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import type { Post as PostType } from 'types/post';
 
 type Props = {
@@ -14,7 +14,7 @@ type Params = {
   id: string;
 };
 
-const Post: VFC<Props> = ({ post }) => {
+const Post: FC<Props> = ({ post }) => {
   const router = useRouter();
 
   if (!router.isFallback && !post.id) {

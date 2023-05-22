@@ -10,7 +10,7 @@ import {
 import type { FieldProps } from 'formik';
 import { Field } from 'formik';
 import type { Dispatch, SetStateAction } from 'react';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
 type Props = InputProps & {
   label: string;
@@ -20,7 +20,7 @@ type Props = InputProps & {
   setErrorMessage: Dispatch<SetStateAction<string>>;
 };
 
-const FormInput: VFC<Props> = ({
+const FormInput: FC<Props> = ({
   label,
   name,
   textArea = false,

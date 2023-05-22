@@ -1,13 +1,13 @@
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { IconButton } from '@chakra-ui/react';
 import { DarkModeBox } from 'components/atoms';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
 type Props = {
   onClick: () => void;
 };
 
-const Hamburger: VFC<Props> = ({ onClick }) => (
+const Hamburger: FC<Props> = ({ onClick }) => (
   <DarkModeBox
     as={IconButton}
     aria-label="menu"

@@ -1,6 +1,6 @@
 import { Box, useColorMode } from '@chakra-ui/react';
 import styled from '@emotion/styled';
-import { VFC } from 'react';
+import { FC } from 'react';
 
 const Path = styled.path`
   opacity: 1;
@@ -10,7 +10,7 @@ const Svg = styled.svg`
   display: block;
 `;
 
-const SvgIcon: VFC = () => {
+const SvgIcon: FC = () => {
   const { colorMode } = useColorMode();
   const bgColor = { light: '#fff', dark: '#000' };
   return (

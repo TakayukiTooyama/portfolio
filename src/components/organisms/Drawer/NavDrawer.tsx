@@ -4,7 +4,7 @@ import {
   DrawerOverlay,
   useColorMode,
 } from '@chakra-ui/react';
-import { VFC } from 'react';
+import { FC } from 'react';
 
 import DrawerBody from './DrawerBody';
 import DrawerHeader from './DrawerHeader';
@@ -14,7 +14,7 @@ type Props = {
   isOpen: boolean;
 };
 
-const NavDrawer: VFC<Props> = ({ onClose, isOpen }) => {
+const NavDrawer: FC<Props> = ({ onClose, isOpen }) => {
   const { colorMode } = useColorMode();
   const bgColor = { light: 'white', dark: 'gray.800' };
   const color = { light: 'black', dark: 'white' };

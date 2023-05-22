@@ -6,7 +6,7 @@ import { Container } from 'components/templates';
 import { Formik } from 'formik';
 import { InputControl, TextareaControl } from 'formik-chakra-ui';
 import useFormSubmit from 'hooks/useFormSubmit';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import { Element } from 'react-scroll';
 import * as yup from 'yup';
 
@@ -22,7 +22,7 @@ const initialValues: Values = {
   comment: '',
 };
 
-const Contact: VFC = () => {
+const Contact: FC = () => {
   const { onSubmit } = useFormSubmit(initialValues);
 
   return (

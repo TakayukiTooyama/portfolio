@@ -2,9 +2,9 @@ import { DrawerBody as Body, Flex, Stack } from '@chakra-ui/react';
 import { GithubIcon, TwitterIcon, ZennIcon } from 'components/atoms';
 import { DarkModeSwitch } from 'components/molecules';
 import { Nav } from 'components/organisms';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
-const DrawerBody: VFC = () => (
+const DrawerBody: FC = () => (
   <Body pt={8}>
     <Stack spacing={12} align="center">
       <Nav />

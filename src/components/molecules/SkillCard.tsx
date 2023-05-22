@@ -1,13 +1,13 @@
 import { Box, Text } from '@chakra-ui/react';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
 type Props = {
   title: string;
   text: string;
 };
 
-const SkillCard: VFC<Props> = ({ title, text }) => (
-  <Box shadow="lg" align="center">
+const SkillCard: FC<Props> = ({ title, text }) => (
+  <Box shadow="lg" textAlign="center">
     <Box py={4} px={2} bg="brand.700" color="white">
       <Text>{title}</Text>
     </Box>

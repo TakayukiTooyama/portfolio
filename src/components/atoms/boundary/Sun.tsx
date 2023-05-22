@@ -1,6 +1,6 @@
 import { useColorMode } from '@chakra-ui/react';
 import { DarkModeBox, MotionBox } from 'components/atoms';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
 const circle = {
   bg: 'white',
@@ -13,7 +13,7 @@ const circle = {
   },
 };
 
-const Sun: VFC = () => {
+const Sun: FC = () => {
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
   const opacity = (num: number) => (isDark ? num - 0.1 : num);

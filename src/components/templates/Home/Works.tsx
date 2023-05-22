@@ -3,7 +3,7 @@ import { DarkModeBox, SectionTitle } from 'components/atoms';
 import Wave2 from 'components/atoms/boundary/Wave2';
 import { Container } from 'components/templates';
 import Link from 'next/link';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import { Element } from 'react-scroll';
 import { Post } from 'types/post';
 
@@ -11,7 +11,7 @@ type Props = {
   posts: Post[];
 };
 
-const Works: VFC<Props> = ({ posts }) => (
+const Works: FC<Props> = ({ posts }) => (
   <DarkModeBox bglight="gray.100">
     <Container maxW="4xl">
       <Element name="works">

@@ -9,10 +9,10 @@ import {
 } from 'components/atoms';
 import Wave2 from 'components/atoms/boundary/Wave2';
 import { Container } from 'components/templates';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import { Element } from 'react-scroll';
 
-const Profile: VFC = () => (
+const Profile: FC = () => (
   <DarkModeBox bglight="gray.100">
     <Container maxW="3xl">
       <Element name="profile">
@@ -38,10 +38,10 @@ const Profile: VFC = () => (
             <Text fontSize="2xl" mb={2}>
               Takayuki Tooyama
             </Text>
-            <HStack justify="center" spacing={4}>
+            <HStack  justifyContent="center" spacing={4}>
               <TwitterIcon />
               <GithubIcon />
-              <ZennIcon />
+              {/* <ZennIcon /> */}
             </HStack>
           </Box>
           <Box
@@ -51,7 +51,7 @@ const Profile: VFC = () => (
             lineHeight="1.5"
           >
             <Text mb={4} lineHeight="1.7">
-              遠山 宜志 新潟県出身21歳
+              遠山 宜志 新潟県出身23歳
               <br />
               フロントエンドを中心として活動中。
               <br />

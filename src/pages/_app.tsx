@@ -2,10 +2,10 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { VFC } from 'react';
+import { FC } from 'react';
 import theme from 'theme';
 
-const MyApp: VFC<AppProps> = ({ Component, pageProps }) => (
+const MyApp: FC<AppProps> = ({ Component, pageProps }) => (
   <>
     <Head>
       <title>ポートフォリオ | Takayuki Tooyama</title>

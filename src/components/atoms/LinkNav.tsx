@@ -1,4 +1,4 @@
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-scroll';
 
 type Props = {
@@ -6,7 +6,7 @@ type Props = {
   link: string;
 };
 
-const LinkNav: VFC<Props> = ({ name, link }) => (
+const LinkNav: FC<Props> = ({ name, link }) => (
   <Link activeClass="active" to={link} spy smooth offset={-70} duration={800}>
     {name}
   </Link>

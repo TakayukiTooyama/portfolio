@@ -1,6 +1,6 @@
 import { Link, useColorModeValue } from '@chakra-ui/react';
 import { BoxShadow } from 'components/atoms';
-import React, { useState, VFC } from 'react';
+import React, { useState, FC } from 'react';
 
 type Props = {
   href: string;
@@ -8,7 +8,7 @@ type Props = {
   h?: string;
 };
 
-const LinkButton: VFC<Props> = ({ href = '', maxW = '200px', h = '50px' }) => {
+const LinkButton: FC<Props> = ({ href = '', maxW = '200px', h = '50px' }) => {
   const [boxStyle, setBoxStyle] = useState('');
   const onClick = () => {
     setBoxStyle('inner');

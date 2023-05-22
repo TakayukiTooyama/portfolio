@@ -5,13 +5,13 @@ import {
   IconButton,
   Text,
 } from '@chakra-ui/react';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
 type Props = {
   onClose: () => void;
 };
 
-const DrawerHeader: VFC<Props> = ({ onClose }) => (
+const DrawerHeader: FC<Props> = ({ onClose }) => (
   <Header borderBottomWidth="1px">
     <Flex justify="space-between" align="center" h="23px">
       <Text>Menu</Text>

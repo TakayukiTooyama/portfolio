@@ -1,13 +1,13 @@
 import { Stack, Text } from '@chakra-ui/react';
 import { BoxShadow, LinkButton } from 'components/atoms';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
 type Props = {
   name: string;
   href: string;
 };
 
-const LinkCard: VFC<Props> = ({ name, href }) => (
+const LinkCard: FC<Props> = ({ name, href }) => (
   <BoxShadow
     px={8}
     py={8}

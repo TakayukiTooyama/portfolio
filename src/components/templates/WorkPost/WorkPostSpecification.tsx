@@ -1,7 +1,7 @@
 import { Box, Divider, Flex, Image, Stack, Text } from '@chakra-ui/react';
 import { Border, DarkModeBox, SectionTitle } from 'components/atoms';
 import { Container } from 'components/templates';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import { Element } from 'react-scroll';
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
   languages: string;
 };
 
-const WorkPostSpecification: VFC<Props> = ({ title, mockup, languages }) => (
+const WorkPostSpecification: FC<Props> = ({ title, mockup, languages }) => (
   <DarkModeBox bglight="white">
     <Container>
       <Element name="spetification">

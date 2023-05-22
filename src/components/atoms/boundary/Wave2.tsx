@@ -1,12 +1,12 @@
 import { useColorMode } from '@chakra-ui/react';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
 type Props = {
   filllight?: string;
   filldark?: string;
 };
 
-const Wave2: VFC<Props> = ({ filllight = '#EBECF2', filldark = '#111111' }) => {
+const Wave2: FC<Props> = ({ filllight = '#EBECF2', filldark = '#111111' }) => {
   const fillDark = filldark === 'gray.800' ? '#1A212C' : filldark;
   const { colorMode } = useColorMode();
   const fill = { light: filllight, dark: fillDark };

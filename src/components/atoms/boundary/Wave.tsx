@@ -1,5 +1,5 @@
 import { Box, useColorMode } from '@chakra-ui/react';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 
 type Props = {
   bglight?: string;
@@ -9,7 +9,7 @@ type Props = {
   up?: boolean;
 };
 
-const Wave: VFC<Props> = ({
+const Wave: FC<Props> = ({
   bglight = 'gray.100',
   bgdark = 'gray.900',
   filllight = '#EBECF2',

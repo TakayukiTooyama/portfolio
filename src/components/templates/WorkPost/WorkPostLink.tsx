@@ -8,7 +8,7 @@ import {
 import { LinkCard } from 'components/molecules';
 import { PostLink } from 'components/organisms';
 import { Container } from 'components/templates';
-import React, { VFC } from 'react';
+import React, { FC } from 'react';
 import { Element } from 'react-scroll';
 
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
   prevSlug: string;
 };
 
-const WorkPostLink: VFC<Props> = ({ siteLink, github, nextSlug, prevSlug }) => (
+const WorkPostLink: FC<Props> = ({ siteLink, github, nextSlug, prevSlug }) => (
   <DarkModeBox>
     <Container maxW="xl" align="center">
       <Element name="link">

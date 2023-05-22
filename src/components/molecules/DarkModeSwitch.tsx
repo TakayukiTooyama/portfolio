@@ -1,9 +1,9 @@
 import { Icon, IconButton, useColorMode } from '@chakra-ui/react';
-import { VFC } from 'react';
+import { FC } from 'react';
 import { FaMoon } from 'react-icons/fa';
 import { IoMdSunny } from 'react-icons/io';
 
-const DarkModeSwitch: VFC = () => {
+const DarkModeSwitch: FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === 'dark';
   return (
