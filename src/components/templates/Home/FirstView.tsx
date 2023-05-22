@@ -1,5 +1,5 @@
 import { ArrowDownIcon } from '@chakra-ui/icons';
-import { Box, Flex, Heading, HStack, Text } from '@chakra-ui/react';
+import { Box, Heading, HStack, Text } from '@chakra-ui/react';
 import {
   DarkModeBox,
   Forest,
@@ -7,7 +7,6 @@ import {
   Sun,
   TwitterIcon,
   Wave,
-  ZennIcon,
 } from 'components/atoms';
 import { motion } from 'framer-motion';
 import { upDown } from 'lib/variants';

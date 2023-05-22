@@ -41,7 +41,7 @@ const FormInput: FC<Props> = ({
             {...props}
           />
         )}
-        <FormErrorMessage color="red.400">{form.errors[name]}</FormErrorMessage>
+        <FormErrorMessage color="red.400">{String(form.errors[name])}</FormErrorMessage>
       </FormControl>
     )}
   </Field>

@@ -5,7 +5,6 @@ import {
   GithubIcon,
   SectionTitle,
   TwitterIcon,
-  ZennIcon,
 } from 'components/atoms';
 import Wave2 from 'components/atoms/boundary/Wave2';
 import { Container } from 'components/templates';

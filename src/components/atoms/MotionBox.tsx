@@ -1,8 +1,6 @@
 import {
   chakra,
   ChakraProps,
-  ComponentWithAs,
-  forwardRef,
   shouldForwardProp,
 } from '@chakra-ui/react';
 import { isValidMotionProp, motion, MotionProps } from 'framer-motion';
